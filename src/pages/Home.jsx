@@ -1,10 +1,6 @@
-import { useNavigate } from "react-router-dom"
-import { Button } from "../components"
 import { projects, skills } from "../data/data"
 
 function Home() {
-
-    const navigate = useNavigate()
 
     return (
         <main>
@@ -60,16 +56,16 @@ function Home() {
                                 </p>
 
                                 <div className="mt-4 flex items-center gap-3">
-                                    <Button
-                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium"
-                                        onClick={() => navigate(project.source)}>
+                                    <a
+                                        href={project.source}
+                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium dark:hover:border-gray-300/0 hover:bg-gray-100 dark:hover:bg-gray-300/10 w-fit px-2 py-1 rounded-md border dark:border-gray-dark dark:bg-gray-dark transition-all duration-300 flex items-center gap-2 text-base">
                                         Source
-                                    </Button>
-                                    <Button
-                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium"
-                                        onClick={() => navigate(project.demo)}>
+                                    </a>
+                                    <a
+                                        href={project.demo}
+                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium dark:hover:border-gray-300/0 hover:bg-gray-100 dark:hover:bg-gray-300/10 w-fit px-2 py-1 rounded-md border dark:border-gray-dark dark:bg-gray-dark transition-all duration-300 flex items-center gap-2 text-base">
                                         Demo
-                                    </Button>
+                                    </a>
                                 </div>
                             </li>
                         ))
