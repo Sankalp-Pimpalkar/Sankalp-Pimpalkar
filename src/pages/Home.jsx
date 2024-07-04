@@ -9,7 +9,7 @@ function Home() {
     return (
         <main>
             <section className="mt-10 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
-                <img className="w-32 h-32 my-2" src="/assets/enderman.gif" alt="enderman" />
+                <img className="w-32 h-32 my-2" src="./enderman.gif" alt="enderman" />
 
                 <span>
                     <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
