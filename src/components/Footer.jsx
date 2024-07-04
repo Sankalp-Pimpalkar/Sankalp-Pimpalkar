@@ -7,7 +7,7 @@ function Footer() {
             </p>
             <ul className="dark:text-gray-300 text-gray-800 mt-4 flex items-center gap-4">
                 <li className="flex items-center gap-2">
-                    <img className="w-5 dark:invert" src="/assets/github.png" alt="github" />
+                    <img className="w-5 dark:invert" src="/github.png" alt="github" />
                     <a className="hover:underline" href="https://github.com/Sankalp-Pimpalkar">
                         Github
                     </a>

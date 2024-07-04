@@ -7,21 +7,21 @@ const navs = [
         id: 1,
         name: "Home",
         path: "/",
-        icon: "/assets/house.png",
+        icon: "/house.png",
         className: "w-5 h-5"
     },
     {
         id: 2,
         name: "About",
         path: "/about",
-        icon: "/assets/about.png",
+        icon: "/about.png",
         className: "w-5 h-5"
     },
     {
         id: 3,
         name: "Github",
         path: "https://github.com/Sankalp-Pimpalkar",
-        icon: "/assets/github.png",
+        icon: "/github.png",
         className: "w-5 h-5 dark:invert"
     }
 ]
@@ -67,10 +67,10 @@ function Navbar() {
                     {
                         isdarkMode ?
                             (
-                                <img className="w-5 h-5" src="/assets/sun.png" alt="light-mode" />
+                                <img className="w-5 h-5" src="/sun.png" alt="light-mode" />
                             ) :
                             (
-                                <img className="w-5 h-5" src="/assets/moon.png" alt="dark-mode" />
+                                <img className="w-5 h-5" src="/moon.png" alt="dark-mode" />
                             )
                     }
                 </Button>
