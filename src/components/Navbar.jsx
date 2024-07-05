@@ -46,7 +46,7 @@ function Navbar() {
 
     return (
         <nav className="fixed top-0 py-5 px-5 md:px-0 inset-x-0 w-full mx-auto bg-white/95 dark:bg-gray-primary/95">
-            <div className="w-full max-w-2xl mx-auto flex flex-col xs:flex-row gap-4 xs:items-center justify-between">
+            <div className="w-full max-w-2xl mx-auto flex flex-col xs:flex-row gap-3 xs:items-center justify-between">
                 <ul className="flex flex-wrap items-center gap-3 overflow-x-auto">
                     {
                         navs.map(nav => (
