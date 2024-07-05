@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         // Fonts goes here
       },
+      screens : {
+        'xs': '425px'
+      }
     },
   },
   darkMode: 'class',
