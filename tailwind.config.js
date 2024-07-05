@@ -17,7 +17,7 @@ export default {
         // Fonts goes here
       },
       screens : {
-        'xs': '400px'
+        'xs': '390px'
       }
     },
   },
