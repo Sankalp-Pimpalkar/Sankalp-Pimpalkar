@@ -4,7 +4,7 @@ function Home() {
 
     return (
         <main>
-            <section className="mt-16 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
+            <section className="mt-28 sm:mt-16 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
                 <img className="w-32 h-32 my-2" src="./enderman.gif" alt="enderman" />
 
                 <span>

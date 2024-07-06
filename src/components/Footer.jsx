@@ -3,7 +3,7 @@ import { Github, Instagram } from "../data/links"
 function Footer() {
     return (
         <div className="p-5 flex flex-col items-center mt-5">
-            <p className="dark:text-gray-300 text-gray-800">
+            <p className="dark:text-gray-300 text-gray-800 text-center">
                 Made with ❤️ by  Sankalp Pimpalkar
             </p>
             <ul className="dark:text-gray-300 text-gray-800 mt-4 flex items-center gap-4">

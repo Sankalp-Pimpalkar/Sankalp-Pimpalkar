@@ -3,8 +3,12 @@ import { College, CSS, Express, Git, HTML, JS, Nextjs, Nodejs, React, TailwindCS
 
 function About() {
     return (
-        <main>
-            <section className="mt-16 flex flex-col gap-4 items-start">
+        <main className="mt-20">
+            <div className="hidden sm:block">
+                <img className="w-20 h-20 rounded-full" src="/logo.jpg" alt="logo"/>
+            </div>
+
+            <section className="mt-8 flex flex-col gap-4 items-start">
                 <p className="text-gray-600 dark:text-gray-300 text-lg font-medium leading-relaxed">
                     I&apos;m Sankalp Pimpalkar, an Engineering Student from
                     <Link href={College}>
@@ -14,7 +18,7 @@ function About() {
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 text-lg font-medium leading-relaxed">
                     My journey began with the basics of
-                    <Link href={HTML}>HTML</Link>,
+                    <Link href={HTML}>{' '}HTML{' '}</Link>,
                     <Link href={CSS}>{' '}CSS{' '}</Link>, and
                     <Link href={JS}>{' '}JavaScript{' '}</Link>,
                     which laid a strong foundation for my frontend development skills. Over time, I have expanded my expertise to include modern frameworks and libraries such as
