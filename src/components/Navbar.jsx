@@ -21,6 +21,13 @@ const navs = [
     },
     {
         id: 3,
+        name: "Feedback",
+        path: "/feedback",
+        icon: "/feedback.png",
+        className: "w-6 h-6"
+    },
+    {
+        id: 4,
         name: "Github",
         path: Github,
         icon: "/github.png",
