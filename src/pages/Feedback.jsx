@@ -9,6 +9,7 @@ function Feedback() {
     const initialState = {
         name: "",
         email: "",
+        type: "comment",
         feedback: ""
     }
 
@@ -17,7 +18,15 @@ function Feedback() {
     const [response, setResponse] = useState(false)
 
     function handleChange(e) {
-        setFeedbackForm(state => ({ ...state, [e.target.id]: e.target.value }))
+
+        const { id, value, type } = e.target
+
+        setFeedbackForm(
+            state => ({
+                ...state,
+                [type === "radio" ? "type" : id]: value
+            })
+        )
     }
 
     function handleClear(e) {
@@ -36,7 +45,6 @@ function Feedback() {
         }
 
         const response = await feedbackFunction(feedbackForm)
-
         setResponse(response)
 
         setFeedbackForm(initialState)
@@ -55,7 +63,7 @@ function Feedback() {
             </h1>
 
             <p className="mt-5 w-full font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
-                Thank you for visiting my website. Your feedback helps me improve and provide a better experience for future visitors. 
+                Thank you for visiting my website. Your feedback helps me improve and provide a better experience for future visitors.
                 Please take a moment to share your thoughts 😇
             </p>
 
@@ -78,6 +86,36 @@ function Feedback() {
                             placeholder="Enter your email"
                         />
 
+                        <div className="flex flex-wrap items-center gap-7">
+                            <span className="flex items-center gap-2">
+                                <input
+                                    id="comment"
+                                    className="accent-gray-500 dark:accent-gray-secondary"
+                                    name="feedback-type"
+                                    checked={feedbackForm.type === "comment"}
+                                    value="comment"
+                                    onChange={handleChange}
+                                    type="radio" />
+                                <label className="font-medium text-sm text-gray-400 cursor-pointer" htmlFor="comment">
+                                    Comment
+                                </label>
+                            </span>
+
+                            <span className="flex items-center gap-2">
+                                <input
+                                    id="suggestion"
+                                    className="accent-gray-500 dark:accent-gray-secondary"
+                                    name="feedback-type"
+                                    checked={feedbackForm.type === "suggestion"}
+                                    value="suggestion"
+                                    onChange={handleChange}
+                                    type="radio" />
+                                <label className="font-medium text-sm text-gray-400 cursor-pointer" htmlFor="suggestion">
+                                    Suggestion
+                                </label>
+                            </span>
+                        </div>
+
                         <textarea
                             id="feedback"
                             value={feedbackForm.feedback}
@@ -90,14 +128,14 @@ function Feedback() {
                         <div className="flex items-center gap-2">
                             <Button
                                 onClick={handleClear}
-                                className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium py-2 px-4">
+                                className="dark:text-gray-300 text-gray-800 bg-gray-100 hover:bg-gray-200 font-medium py-2 px-4">
                                 Clear
                             </Button>
 
                             <Button
                                 type="submit"
                                 disabled={isPending}
-                                className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium py-2 px-4 flex items-center gap-2
+                                className="dark:text-gray-300 text-gray-800 bg-gray-100 hover:bg-gray-200 font-medium py-2 px-4 flex items-center gap-2
                                 disabled:bg-gray-400
                                 disabled:text-gray-700
                                 dark:disabled:bg-gray-tertiary dark:disabled:text-gray-400">

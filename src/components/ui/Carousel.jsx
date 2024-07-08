@@ -60,7 +60,7 @@ function Carousel({ children, className = "" }) {
             )}
             <ul
                 ref={carouselRef}
-                className="flex items-center gap-3 overflow-x-auto mt-1 sm:mt-0 hide-scrollbar snap-x"
+                className="flex items-start gap-3 overflow-x-auto mt-1 sm:mt-0 hide-scrollbar snap-x"
             >
                 {children}
             </ul>

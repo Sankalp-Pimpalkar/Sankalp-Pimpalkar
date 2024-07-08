@@ -1,3 +1,4 @@
+import Project from "../components/ui/Project"
 import { projects, skills } from "../data/data"
 
 function Home() {
@@ -44,30 +45,15 @@ function Home() {
                 <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start">
                     {
                         projects.map(project => (
-                            <li key={project.id} className="dark:bg-gray-secondary bg-gray-200 p-4 rounded-lg w-full sm:max-w-xs border dark:border-gray-tertiary border-gray-300">
-                                <p className="font-mono text-green-500 text-lg">
-                                    {project.year}
-                                </p>
-                                <h3 className="text-xl font-bold mt-2 dark:text-gray-200 text-gray-800">
-                                    {project.title}
-                                </h3>
-                                <p className="mt-2 dark:text-gray-300 text-gray-600">
-                                    {project.description}
-                                </p>
-
-                                <div className="mt-4 flex items-center gap-3">
-                                    <a
-                                        href={project.source}
-                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium dark:hover:border-gray-300/0 hover:bg-gray-100 dark:hover:bg-gray-300/10 w-fit px-2 py-1 rounded-md border dark:border-gray-dark dark:bg-gray-dark transition-all duration-300 flex items-center gap-2 text-base">
-                                        Source
-                                    </a>
-                                    <a
-                                        href={project.demo}
-                                        className="dark:text-gray-300 text-gray-800 bg-gray-300 font-medium dark:hover:border-gray-300/0 hover:bg-gray-100 dark:hover:bg-gray-300/10 w-fit px-2 py-1 rounded-md border dark:border-gray-dark dark:bg-gray-dark transition-all duration-300 flex items-center gap-2 text-base">
-                                        Demo
-                                    </a>
-                                </div>
-                            </li>
+                            <Project
+                                key={project.id}
+                                id={project.id}
+                                title={project.title}
+                                year={project.year}
+                                description={project.description}
+                                source={project.source}
+                                demo={project.demo}
+                            />
                         ))
                     }
                 </ul>
