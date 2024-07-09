@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import Button from "./ui/Button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Github } from "../data/links"
 import Carousel from "./ui/Carousel"
 
@@ -46,11 +46,27 @@ function Navbar() {
         if (htmlElement.contains("dark")) {
             htmlElement.replace("dark", "light");
             setIsDarkMode(false);
+            localStorage.setItem("theme", "light")
         } else {
             htmlElement.replace("light", "dark");
             setIsDarkMode(true);
+            localStorage.setItem("theme", "dark")
         }
     }
+
+    useEffect(() => {
+
+        const htmlElement = document.getElementsByTagName("html")[0].classList;
+        const themeState = localStorage.getItem("theme")
+
+        // Sets dark as default
+        if (!themeState) {
+            localStorage.setItem("theme", "dark");
+            htmlElement.add("dark");
+        } else {
+            htmlElement.add(themeState)
+        }
+    }, [])
 
     return (
         <nav className="fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto bg-white/95 dark:bg-gray-primary/95">
