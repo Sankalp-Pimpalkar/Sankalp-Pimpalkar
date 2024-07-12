@@ -53,6 +53,7 @@ function Home() {
                                 description={project.description}
                                 source={project.source}
                                 demo={project.demo}
+                                level={project.level}
                             />
                         ))
                     }

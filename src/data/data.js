@@ -41,12 +41,15 @@ export const skills = [
         description: 'Coding with Visual Studio Code'
     }
 ];
+//  green --> yellow --> red --> purple
+//  Easy --> Intermediate --> Hard --> Advanced
 
 export const projects = [
     {
         id: 1,
         year: 2024,
         title: 'ChatBot',
+        level: 'Intermediate',
         description: 'ChatBot is a chatbot that can be used to get information about any topic',
         source: 'https://github.com/Sankalp-Pimpalkar/AI-Chat-Bot',
         demo: 'https://ai-chat-bot-zeta.vercel.app/welcome'
