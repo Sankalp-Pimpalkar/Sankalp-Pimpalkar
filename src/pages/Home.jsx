@@ -13,7 +13,7 @@ function Home() {
                         Hey, I&apos;m Sankalp
                     </h1>
                     <p className="w-full max-w-sm mt-2 font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
-                        I&apos;m a Full Stack Developer who has a dream to be a senior software engineer one day 👨‍🎓
+                    I&apos;m a full stack developer with a dream of becoming a senior software engineer one day 👨‍🎓
                     </p>
                 </span>
             </section>
