@@ -50,8 +50,17 @@ export const projects = [
         year: 2024,
         title: 'ChatBot',
         level: 'Intermediate',
-        description: 'ChatBot is a chatbot that can be used to get information about any topic',
+        description: 'A chatbot that can be used to get information about any topic',
         source: 'https://github.com/Sankalp-Pimpalkar/AI-Chat-Bot',
         demo: 'https://ai-chat-bot-zeta.vercel.app/welcome'
+    },
+    {
+        id: 2,
+        year: 2024,
+        title: 'Markdown Converter',
+        level: 'Easy',
+        description: 'A simple markdown converter that converts markdown to HTML',
+        source: 'https://github.com/Sankalp-Pimpalkar/markdown-converter',
+        demo: 'https://markdown-converter-seven.vercel.app'
     },
 ]
