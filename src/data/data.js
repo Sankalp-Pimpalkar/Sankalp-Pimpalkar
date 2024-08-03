@@ -63,4 +63,13 @@ export const projects = [
         source: 'https://github.com/Sankalp-Pimpalkar/markdown-converter',
         demo: 'https://markdown-converter-seven.vercel.app'
     },
+    {
+        id: 3,
+        year: 2024,
+        title: 'Next todolist',
+        level: 'Easy',
+        description: 'A simple todolist app with nextjs and mongoDB',
+        source: 'https://github.com/Sankalp-Pimpalkar/Todolist---Nextjs',
+        demo: 'https://todolist-nextjs-nu.vercel.app/'
+    },
 ]
