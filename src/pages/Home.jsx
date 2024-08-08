@@ -1,5 +1,6 @@
 import Project from "../components/ui/Project"
-import { projects, skills } from "../data/data"
+import Work from "../components/ui/Work"
+import { projects, skills, works } from "../data/data"
 
 function Home() {
 
@@ -13,7 +14,7 @@ function Home() {
                         Hey, I&apos;m Sankalp
                     </h1>
                     <p className="w-full max-w-sm mt-2 font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
-                    I&apos;m a full stack developer with a dream of becoming a senior software engineer one day 👨‍🎓
+                        I&apos;m a full stack developer with a dream of becoming a senior software engineer one day 👨‍🎓
                     </p>
                 </span>
             </section>
@@ -54,6 +55,28 @@ function Home() {
                                 source={project.source}
                                 demo={project.demo}
                                 level={project.level}
+                            />
+                        ))
+                    }
+                </ul>
+            </section>
+
+            <section className="mt-8">
+                <h3 className="text-xl font-bold dark:text-gray-200 text-gray-600">
+                    Work Experience
+                </h3>
+
+                <ul className="mt-4 flex flex-col items-start w-full">
+                    {
+                        works.map((work) => (
+                            <Work
+                                key={work.id}
+                                companyName={work.companyName}
+                                role={work.role}
+                                companylocation={work.location}
+                                description={work.companyDescription}
+                                respAndAchievements={work.respAndAchievements}
+                                skillUtilized={work.skillUtilized}
                             />
                         ))
                     }

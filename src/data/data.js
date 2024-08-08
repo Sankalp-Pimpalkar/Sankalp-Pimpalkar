@@ -73,3 +73,23 @@ export const projects = [
         demo: 'https://todolist-nextjs-nu.vercel.app/'
     },
 ]
+
+export const works = [
+    {
+        id: 1,
+        companyName: "Superceuticals Private Limited",
+        role: "Full stack developer",
+        location: "Gurugram, Haryana 122005",
+        companyDescription: "Superceuticals is an innovative healthcare startup, striving to break barriers in healthcare making it more economical, faster, and readily available.",
+        respAndAchievements: [
+            "Developed and maintained scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js)",
+            "Worked with Angular on specific projects, enhancing front-end functionality and contributing to the development of a robust admin panel."
+        ],
+        skillUtilized: [
+            "Programming Languages: JavaScript (ES6+), TypeScript.",
+            "Frameworks/Libraries: React, Node.js, Express.js, Angular.",
+            "Database: MongoDB, Mongoose.",
+            "Soft Skills: Project Management, Problem Solving, Collaboration."
+        ]
+    }
+]
